@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Press Start 2P", cursive;
+}
+
+.circleBase {
+  display: block;
+  left: 30%;
+}
+
+.keySpace {
+  position: absolute;
+  display: block;
+  left: 80%;
+}
+
+#space {
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+}
+#rotateMode {
+  border-radius: 50%;
+  width: 125px;
+  height: 125px;
+  background-color: gray;
+  color: white;
+  position: absolute;
+}
+#left,
+#right,
+#up,
+#down {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+#left,
+#right {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+#up,
+#down {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+#left {
+  left: 0;
+}
+
+#right {
+  right: 0;
+}
+
+#up {
+  top: 0;
+}
+#down {
+  bottom: 0;
+}
+/* .gamepad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.grid {
+  display: grid;
+  grid-template-columns: 320px 200px;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.game-board {
+  border: 2px solid;
+}
+
+.play-button,
+.list-button {
+  background-color: #4caf50;
+  font-size: 16px;
+  padding: 15px 30px;
+  cursor: pointer;
+}
+
+.list-button {
+  position: sticky;
+  font-size: 12px !important;
+  margin-right: 10px;
+  top: 100%;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 300px 320px 200px;
+}
+
+.left-column {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+#highScores > li {
+  font-size: 13px;
+}
+
+.btn-mode {
+  display: grid;
+  top: 10px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  background-color: #4caf50;
+  font-size: 12px;
+  padding: 10px 25px;
+  margin: 5px 5px;
+  border: solid 1px;
+  cursor: pointer;
+}
+
+label:hover {
+  background-color: #ffff;
+  color: #4caf50;
+}
+
+#mode-one:checked:checked ~ .mode-one,
+#mode-two:checked:checked ~ .mode-two,
+#mode-three:checked:checked ~ .mode-three,
+#mode-four:checked:checked ~ .mode-four,
+#mode-five:checked:checked ~ .mode-five {
+  background-color: #ffff;
+  color: #4caf50;
+}

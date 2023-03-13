@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tetris by LeTrongTinh</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="grid">
+        <div class="left-column">
+          <div>
+            <h2>HIGH SCORES</h2>
+            <ol id="highScores"></ol>
+          </div>
+
+          <button onclick="resetLocalStrong()" class="list-button">
+            Clear list
+          </button>
+        </div>
+        <canvas id="board" class="game-board"></canvas>
+        <div class="right-column">
+          <div>
+            <h1>tetris</h1>
+            <p>Score: <span id="score">0</span></p>
+            <p>Lines: <span id="lines">0</span></p>
+            <p>Level: <span id="level">0</span></p>
+            <canvas id="next" class="next"></canvas>
+          </div>
+          <div class="btn-mode">
+            <input type="radio" name="mode" id="mode-one" value="0" checked />
+            <label class="mode-one" for="mode-one">Basic</label>
+            <input type="radio" name="mode" id="mode-two" value="1" />
+            <label class="mode-two" for="mode-two">Easy</label>
+            <input type="radio" name="mode" id="mode-three" value="2" />
+            <label class="mode-three" for="mode-three">Normal</label>
+            <input type="radio" name="mode" id="mode-four" value="3" />
+            <label class="mode-four" for="mode-four">Hard</label>
+            <input type="radio" name="mode" id="mode-five" value="4" />
+            <label class="mode-five" for="mode-five">Impossible</label>
+          </div>
+          <button onclick="play()" class="play-button">Play</button>
+        </div>
+      </div>
+
+      <div id="gamepad">
+        <div class="circleBase" id="rotateMode">
+          <button onclick="keyLeft()" id="left" class="btn btn-default btn-sm">
+            <span class="glyphicon glyphicon-arrow-left"></span>
+          </button>
+          <button onclick="keyRight()" id="right" class="btn btn-default btn-sm">
+            <span class="glyphicon glyphicon-arrow-right"></span>
+          </button>
+          <button onclick="keyUp()" id="up" class="btn btn-default btn-sm">
+            <span class="glyphicon glyphicon-arrow-up"></span>
+          </button>
+          <button onclick="keyDown()" id="down" class="btn btn-default btn-sm">
+            <span class="glyphicon glyphicon-arrow-down"></span>
+          </button>
+        </div>
+  
+        <div class="keySpace" id="SpaceMode>
+          <button onclick="keySpace()" id="space" class="btn btn-default btn-sm">
+            <span class="glyphicon glyphicon-minus"></span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <script type="text/javascript" src="constants.js"></script>
+    <script type="text/javascript" src="board.js"></script>
+    <script type="text/javascript" src="piece.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
